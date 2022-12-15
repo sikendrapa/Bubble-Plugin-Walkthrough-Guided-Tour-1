@@ -1,0 +1,20 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 16,
+        "width": 16
+    },
+    "display": "Walkthrough guided tour",
+    "fields": {
+        "AAE": {
+            "caption": "id",
+            "default_val": "palji",
+            "editor": "DynamicValue",
+            "name": "id",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "icon": "ion-android-checkbox-blank"
+}
