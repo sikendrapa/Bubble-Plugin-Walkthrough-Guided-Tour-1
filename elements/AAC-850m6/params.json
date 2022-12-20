@@ -2,19 +2,160 @@
     "add_is_visible": true,
     "category": "visual elements",
     "default_dim": {
-        "height": 16,
-        "width": 16
+        "height": 20,
+        "width": 20
     },
-    "display": "Walkthrough guided tour",
-    "fields": {
-        "AAE": {
-            "caption": "id",
-            "default_val": "palji",
-            "editor": "DynamicValue",
-            "name": "id",
-            "rank": 0,
-            "value": "text"
+    "display": "Tour",
+    "events": {
+        "AAV": {
+            "caption": "Next is clicked",
+            "doc": "Event is triggered everytime you goto a next step",
+            "name": "onchange"
+        },
+        "AAW": {
+            "caption": "is completed",
+            "doc": "Event is triggered at last step on tour",
+            "name": "oncomplete"
+        },
+        "AAX": {
+            "caption": "is exited",
+            "doc": "Event is triggered when you exit a tour",
+            "name": "onexit"
         }
     },
-    "icon": "ion-android-checkbox-blank"
+    "fields": {
+        "AAE": {
+            "caption": "Theme",
+            "default_val": "Default",
+            "editor": "Dropdown",
+            "name": "theme",
+            "options": "Default,Dark,Flattener,Modern,Nassim,Nazanin,Royal",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAG": {
+            "caption": "Buttons",
+            "default_val": true,
+            "doc": "Show next/prev buttons",
+            "editor": "Checkbox",
+            "name": "showbutton",
+            "rank": 1
+        },
+        "AAH": {
+            "caption": "Bullets",
+            "default_val": true,
+            "doc": "Show bullet points indicating step number",
+            "editor": "Checkbox",
+            "name": "showbullets",
+            "rank": 2
+        },
+        "AAI": {
+            "caption": "Step numbers",
+            "default_val": false,
+            "doc": "Current step number of tour",
+            "editor": "Checkbox",
+            "name": "showstepnumbers",
+            "rank": 3
+        },
+        "AAJ": {
+            "caption": "Progress Bar",
+            "default_val": false,
+            "doc": "Display a progress bar on intro box",
+            "editor": "Checkbox",
+            "name": "showprogress",
+            "rank": 4
+        },
+        "AAK": {
+            "caption": "Exit on overlay click",
+            "default_val": false,
+            "doc": "Exit tour if clicked outside intro box",
+            "editor": "Checkbox",
+            "name": "exitonoverlayclick",
+            "rank": 5
+        },
+        "AAL": {
+            "caption": "Next label",
+            "default_val": "Next",
+            "editor": "DynamicValue",
+            "name": "nextlabel",
+            "rank": 6,
+            "value": "text"
+        },
+        "AAM": {
+            "caption": "Previous Label",
+            "default_val": "Prev",
+            "editor": "DynamicValue",
+            "name": "prevlabel",
+            "rank": 7,
+            "value": "text"
+        },
+        "AAN": {
+            "caption": "Done Label",
+            "default_val": "Done",
+            "editor": "DynamicValue",
+            "name": "donelabel",
+            "rank": 8,
+            "value": "text"
+        },
+        "AAO": {
+            "caption": "Overlay opacity",
+            "default_val": 0.5,
+            "doc": "Number value between 0 and 1",
+            "editor": "DynamicValue",
+            "name": "overlayopacity",
+            "rank": 9,
+            "value": "number"
+        },
+        "AAP": {
+            "caption": "Title color",
+            "default_val": "rgba(0, 0, 0, 1)",
+            "doc": "Color of intro headings",
+            "editor": "Color",
+            "in_style": true,
+            "name": "titlecolor",
+            "optional": true,
+            "rank": 10
+        },
+        "AAR": {
+            "caption": "Intro color",
+            "default_val": "rgba(0, 0, 0, 1)",
+            "doc": "Color of intro content",
+            "editor": "Color",
+            "name": "introcolor",
+            "optional": true,
+            "rank": 11
+        },
+        "AAS": {
+            "caption": "Line Spacing",
+            "default_val": 1,
+            "doc": "Space between lines in pixels",
+            "editor": "DynamicValue",
+            "name": "lineheight",
+            "optional": true,
+            "rank": 12,
+            "value": "number"
+        }
+    },
+    "icon": "ion-android-walk",
+    "property_applications": {
+        "MinWidth": true
+    },
+    "states": {
+        "AAT": {
+            "caption": "Step Number",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n    return 1;\n\n}"
+            },
+            "name": "stepnumber",
+            "value": "number"
+        },
+        "AAU": {
+            "caption": "Active",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n    \treturn false;\n}"
+            },
+            "name": "isActive",
+            "value": "boolean"
+        }
+    }
 }

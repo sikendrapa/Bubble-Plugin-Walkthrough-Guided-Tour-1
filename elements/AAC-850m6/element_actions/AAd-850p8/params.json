@@ -1,0 +1,51 @@
+{
+    "caption": "Add step",
+    "doc": "",
+    "fields": {
+        "AAe": {
+            "caption": "Element ID*",
+            "doc": "Enter the element ID",
+            "editor": "DynamicValue",
+            "name": "elemid",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAf": {
+            "caption": "Intro*",
+            "default_val": "www.thechakor.com",
+            "doc": "If left empty, introJs will run on elements vertically.",
+            "editor": "DynamicValue",
+            "name": "dataintro",
+            "rank": 1,
+            "value": "text"
+        },
+        "AAg": {
+            "caption": "Step*",
+            "default_val": "1",
+            "doc": "If left empty, introJs will run on elements vertically.",
+            "editor": "DynamicValue",
+            "name": "datastep",
+            "rank": 2,
+            "value": "text"
+        },
+        "AAh": {
+            "caption": "Title",
+            "doc": "Enter a Title for current window",
+            "editor": "DynamicValue",
+            "name": "datatitle",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "AAi": {
+            "caption": "Position",
+            "default_val": "Bottom",
+            "doc": "Position of the popup",
+            "editor": "Dropdown",
+            "name": "dataposition",
+            "optional": true,
+            "options": "Bottom,Top,Left,Right",
+            "rank": 4
+        }
+    }
+}
